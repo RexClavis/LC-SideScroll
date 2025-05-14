@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 3f;
 
     private Rigidbody2D rb;
-
+    private Vector3 startPosition;
     private SpriteRenderer spriteRenderer;
     void Start()
     {
@@ -16,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startPosition = transform.position;
     }
 
     #region AnimationHandler
@@ -53,10 +52,20 @@ public class PlayerMovement : MonoBehaviour
 
 
         // Mengaktifkan lompatan player jika player menyentuh tanah
-        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.5f)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             PlayJump();
         }
+
     }
+    public void ResetToStart()
+{
+    rb.velocity = Vector2.zero;
+    rb.angularVelocity = 0f;
+
+    transform.position = startPosition;
+    rb.WakeUp(); // memastikan physics-nya aktif kembali
+}
+
 }
