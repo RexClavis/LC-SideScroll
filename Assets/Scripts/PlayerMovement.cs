@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     void Start()
     {
-        // Ambil komponen rigidbody dari objek player
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -43,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Menggerakan player ke kanan atau kiri menggunakan transform.translate
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(new Vector3(horizontalInput * speed * Time.deltaTime, 0f, 0f));
         SpriteFlip(horizontalInput);
@@ -51,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput != 0) PlayWalk();
 
 
-        // Mengaktifkan lompatan player jika player menyentuh tanah
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.5f)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -65,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     rb.angularVelocity = 0f;
 
     transform.position = startPosition;
-    rb.WakeUp(); // memastikan physics-nya aktif kembali
+    rb.WakeUp();
 }
 
 }
