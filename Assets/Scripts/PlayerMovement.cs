@@ -4,10 +4,17 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1f;
     public float jumpForce = 3f;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
 
+    private bool isGrounded;
+    private bool jumpRequest; // NEW
     private Rigidbody2D rb;
     private Vector3 startPosition;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,27 +23,14 @@ public class PlayerMovement : MonoBehaviour
         startPosition = transform.position;
     }
 
-    #region AnimationHandler
-    private Animator animator;
-    private void PlayWalk()
+    void Update()
     {
-        animator.SetTrigger("goWalk");
-    }
-    private void PlayJump()
-    {
-        animator.SetTrigger("goJump");
-    }
-    #endregion
+        // Handle input here
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-    private void SpriteFlip(float horizontalInput)
-    {
-        if (horizontalInput < 0)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            spriteRenderer.flipX = true;
-        }
-        else
-        {
-            spriteRenderer.flipX = false;
+            jumpRequest = true;
         }
     }
 
@@ -48,21 +42,37 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalInput != 0) PlayWalk();
 
-
-        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.5f)
+        if (jumpRequest)
         {
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, 0); // Optional: cancel downward force
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             PlayJump();
+            jumpRequest = false; // Reset jump
         }
-
     }
+
+    private void SpriteFlip(float horizontalInput)
+    {
+        spriteRenderer.flipX = horizontalInput < 0;
+    }
+
+    #region AnimationHandler
+    private void PlayWalk()
+    {
+        animator.SetTrigger("goWalk");
+    }
+
+    private void PlayJump()
+    {
+        animator.SetTrigger("goJump");
+    }
+    #endregion
+
     public void ResetToStart()
-{
-    rb.velocity = Vector2.zero;
-    rb.angularVelocity = 0f;
-
-    transform.position = startPosition;
-    rb.WakeUp();
-}
-
+    {
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        transform.position = startPosition;
+        rb.WakeUp();
+    }
 }

@@ -1192,8 +1192,8 @@ GameObject:
   m_Component:
   - component: {fileID: 390501012}
   - component: {fileID: 390501011}
-  - component: {fileID: 390501014}
   - component: {fileID: 390501013}
+  - component: {fileID: 390501014}
   m_Layer: 0
   m_Name: Mossy - Decorations&Hazards_7
   m_TagString: Trap
@@ -1262,7 +1262,7 @@ Transform:
   m_GameObject: {fileID: 390501010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.160868, y: -13.797853, z: 0}
+  m_LocalPosition: {x: -17.46, y: -14.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1882,9 +1882,9 @@ GameObject:
   - component: {fileID: 561367340}
   - component: {fileID: 561367339}
   - component: {fileID: 561367341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_8
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1988,7 +1988,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0453279}
+  m_Offset: {x: 0, y: -0.025732398}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1999,7 +1999,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.61, y: 4.409344}
+  m_Size: {x: 15.61, y: 4.448535}
   m_EdgeRadius: 0
 --- !u!1 &607983630
 GameObject:
@@ -2011,9 +2011,10 @@ GameObject:
   m_Component:
   - component: {fileID: 607983632}
   - component: {fileID: 607983631}
+  - component: {fileID: 607983633}
   m_Layer: 0
   m_Name: Mossy - Decorations&Hazards_23
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2085,6 +2086,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 376381070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &607983633
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607983630}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.25704193, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.56, y: 4.44}
+    newSize: {x: 3.56, y: 4.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.30413055, y: 4.44}
+  m_EdgeRadius: 0
 --- !u!1 &629446447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,9 +2179,9 @@ GameObject:
   - component: {fileID: 642145281}
   - component: {fileID: 642145280}
   - component: {fileID: 642145282}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2239,7 +2285,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.052514553}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2250,7 +2296,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.49, y: 4.51}
+  m_Size: {x: 10.49, y: 4.404971}
   m_EdgeRadius: 0
 --- !u!1 &704141570
 GameObject:
@@ -2621,9 +2667,9 @@ GameObject:
   - component: {fileID: 852080679}
   - component: {fileID: 852080678}
   - component: {fileID: 852080680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - MossyHills_11
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2689,7 +2735,7 @@ Transform:
   m_GameObject: {fileID: 852080677}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037467957, y: -11.93713, z: 0}
+  m_LocalPosition: {x: 0.49, y: -11.93713, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2727,7 +2773,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.09863353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2738,7 +2784,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.34, y: 4.25}
+  m_Size: {x: 5.34, y: 4.052733}
   m_EdgeRadius: 0
 --- !u!1 &905508297
 GameObject:
@@ -2751,9 +2797,9 @@ GameObject:
   - component: {fileID: 905508299}
   - component: {fileID: 905508298}
   - component: {fileID: 905508300}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_8 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2857,7 +2903,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.02631855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2868,7 +2914,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.61, y: 4.5}
+  m_Size: {x: 15.61, y: 4.447363}
   m_EdgeRadius: 0
 --- !u!1 &928080092
 GameObject:
@@ -2881,9 +2927,9 @@ GameObject:
   - component: {fileID: 928080093}
   - component: {fileID: 928080095}
   - component: {fileID: 928080094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - FloatingPlatforms_8 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2935,7 +2981,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.047586918}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2946,7 +2992,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.61, y: 4.5}
+  m_Size: {x: 15.61, y: 4.404826}
   m_EdgeRadius: 0
 --- !u!212 &928080095
 SpriteRenderer:
@@ -3862,6 +3908,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
+--- !u!1 &1749696834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749696835}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749696835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749696834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: -1.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2103789990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759675539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,10 +4677,11 @@ Transform:
   m_GameObject: {fileID: 2103789988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.54, y: -2.88, z: 0}
+  m_LocalPosition: {x: -6.54, y: -2.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1749696835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2103789991
@@ -4638,7 +4716,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.029524148}
+  m_Offset: {x: 0, y: 0.0062537193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4649,7 +4727,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7542372, y: 2.935206}
+  m_Size: {x: 1.7542372, y: 2.8636503}
   m_EdgeRadius: 0
 --- !u!50 &2103789992
 Rigidbody2D:
@@ -4691,7 +4769,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 17
+  jumpForce: 14
+  groundCheck: {fileID: 1749696835}
+  groundCheckRadius: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &2103789995
 Animator:
   serializedVersion: 5

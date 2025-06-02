@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Checkpoint
   - Trap
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

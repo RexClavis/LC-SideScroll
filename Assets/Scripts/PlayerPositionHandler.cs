@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerPositionHandler : MonoBehaviour
 {
@@ -20,11 +22,19 @@ public class PlayerPositionHandler : MonoBehaviour
     }
     public void OnFinish()
     {
-        //diisi nnt
+        SceneManager.LoadScene("EndScreen");
+
     }
     public void OnTrap()
     {
         ChangePlayerPosition(currentCheckpointPosition);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            OnFinish();
+        }
     }
     #endregion
 
@@ -34,7 +44,6 @@ public class PlayerPositionHandler : MonoBehaviour
     {
             transform.position = playerPositionData.position;
     }
-    // Update is called once per frame
     private void SavePosition(Vector2 newPosition)
     {
         playerPositionData.position = newPosition;
