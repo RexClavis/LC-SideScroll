@@ -22,8 +22,9 @@ public class PlayerPositionHandler : MonoBehaviour
     }
     public void OnFinish()
     {
-        SceneManager.LoadScene("EndScreen");
-
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        GameManager.Instance.ChangeLevel(currentSceneIndex);
+        SceneManager.LoadScene("Title");
     }
     public void OnTrap()
     {
